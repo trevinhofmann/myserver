@@ -1,0 +1,22 @@
+{
+  "name" : "myserver",
+  "version" : "0.0.1",
+  "description" : "A Bitcoin wallet",
+  "homepage" : "https://github.com/thofmann/myserver",
+  "repository" : {
+	"type" : "git",
+	"url" : "https://github.com/thofmann/myserver.git"
+  },
+  "bugs" : {
+    "url" : "https://github.com/thofmann/myserver/issues",
+    "email" : "trevinhofmann@gmail.com"
+  },
+  "author" : {
+    "name" : "Trevin Hofmann",
+    "email" : "trevinhofmann@gmail.com"
+  },
+  "dependencies" : {
+    "express" : "*"
+  },
+  "main" : "app.js"
+}
