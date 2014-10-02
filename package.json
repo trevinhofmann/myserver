@@ -16,7 +16,8 @@
     "email" : "trevinhofmann@gmail.com"
   },
   "dependencies" : {
-    "express" : "*"
+    "express" : "*",
+    "vhost" : "*"
   },
   "main" : "app.js"
 }

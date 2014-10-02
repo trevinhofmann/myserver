@@ -11,13 +11,13 @@ var app = express();
 var mychain = require('../mychain')();
 
 // MyWallet Bitcoin wallet
-//var mywallet = require('../mywallet')();
+var mywallet = require('../mywallet')();
 
 // Use MyChain at mychain.io and www.mychain.io
 app.use(vhost('mychain.io', mychain));
 app.use(vhost('www.mychain.io', mychain));
 
 // Use MyWallet at wallet.mychain.io
-//app.use(vhost('wallet.mychain.io'), mywallet);
+app.use(vhost('wallet.mychain.io', mywallet));
 
 app.listen(80);
