@@ -1,6 +1,9 @@
 // The express web server module
 var express = require('express');
 
+// The virtual host for handling subdomains
+var vhost = require('vhost');
+
 // Instantiate web server application
 var app = express();
 
@@ -8,13 +11,13 @@ var app = express();
 var mychain = require('../mychain')();
 
 // MyWallet Bitcoin wallet
-var mywallet = require('../mywallet')();
+//var mywallet = require('../mywallet')();
 
 // Use MyChain at mychain.io and www.mychain.io
-app.use(express.vhost('mychain.io'), mychain);
-app.use(express.vhost('www.mychain.io'), mychain);
+app.use(vhost('mychain.io', mychain));
+app.use(vhost('www.mychain.io', mychain));
 
 // Use MyWallet at wallet.mychain.io
-//app.use(express.vhost('wallet.mychain.io'), mywallet);
+//app.use(vhost('wallet.mychain.io'), mywallet);
 
 app.listen(80);
